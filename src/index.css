@@ -1,0 +1,210 @@
+:root {
+	--window-background-color: #021C1E;
+	--window-topbar-color: #1B7A72;
+	--textarea-font-color: #F4CC70;
+
+	--text-font-color: #021C1E;
+	--text-font-family: 'Share Tech Mono', monospace;
+	--text-font-size: 1.1em;
+	--text-line-height: 1.5em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #EDF2F4;
+
+  font-family: var(--text-font-family);
+  color: var(--text-font-color);
+  line-height: var(--text-line-height);
+}
+
+main {
+	width: 90%;
+	margin: 8em auto 2em auto;
+	max-width: 1140px;
+}
+
+span {
+	color: #76FF03;
+}
+
+#title {
+	font-size: 1.3em;
+	text-align: center;
+	color: #EDF2F4;
+}
+
+#logo-container {
+	margin-left: 1.5em;
+	width: 64px;
+}
+
+#github-link {
+	width: 40px;
+	margin-right: 1.5em;
+}
+
+.editor-container, .previewer-container {
+	height: 450px;
+	border-radius: 20px;
+	background: #ECE4B7;
+}
+
+.editor-container {
+	width: 40%;
+	padding: 1em;
+}
+
+.previewer-container {
+	width: 50%;
+	padding: 1em;
+}
+
+.full-window {
+	width: 90vw;
+	height: 90vh;
+	padding: 1em;
+	border-radius: 20px;
+	background: #ECE4B7;
+}
+
+#editor-window, #previewer-window {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#editor-window {
+	background: var(--window-background-color);
+}
+
+#previewer-window {
+	background: #F5FBEF;
+}
+
+#editor-topbar, #previewer-topbar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 2em;
+	background: var(--window-topbar-color);
+}
+
+#editor, #preview {
+	padding: 3em 1em 0 1em;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background: transparent;
+	overflow: auto;
+}
+
+#editor::-webkit-scrollbar, #preview::-webkit-scrollbar {
+	width: 10px;
+}
+
+#editor::-webkit-scrollbar-track {
+	background: var(--window-background-color);
+}
+
+#preview::-webkit-scrollbar-track {
+	background: #F5FBEF;
+}
+
+#editor::-webkit-scrollbar-thumb, #preview::-webkit-scrollbar-thumb {
+	background: #0F433F;
+}
+
+#editor {
+	font-family: var(--text-font-family);
+	font-size: var(--text-font-size);
+	color: var(--textarea-font-color);
+	line-height: var(--text-line-height);
+	resize: none;
+}
+
+.flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.flex-row {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+}
+
+.flex-column {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+}
+
+.flex-align-center {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.flex-justify-center {
+	-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+
+.flex-justify-between {
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.hide {
+	display: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-height: 768px) {
+	main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column nowrap;
+		        flex-flow: column nowrap;
+	}
+
+	.editor-container, .previewer-container {
+		margin: 2em 0;
+		width: 90%;
+		padding: 2em;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column nowrap;
+		        flex-flow: column nowrap;
+	}
+
+	.editor-container, .previewer-container {
+		margin: 2em 0;
+		width: 90%;
+		padding: 1em;
+	}
+
+	.editor-container {
+		height: 200px;
+	}
+
+	main {
+		margin: 6em auto 2em auto;
+	}
+}
